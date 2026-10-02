@@ -1,7 +1,12 @@
+#!/bin/bash
 # Simple Interest Calculator
 
-A simple calculator to calculate simple interest.
+echo "Enter Principal:"
+read p
+echo "Enter Rate of Interest:"
+read r
+echo "Enter Time:"
+read t
 
-Formula: Simple Interest = (Principal * Rate * Time) / 100
-
-This project demonstrates Git and GitHub workflow.
+si=$(echo "scale=2; $p * $r * $t / 100" | bc)
+echo "The Simple Interest is: $si"
